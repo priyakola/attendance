@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Gvpce</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<style>
+    /* Set height of the grid so .sidenav can be 100% (adjust if needed) */
+    .row.content {height: 200px}
+    
+    /* Set gray background color and 100% height */
+    .sidenav {
+      background-color: white;
+    
+    }
+    
+    /* Set black background color, white text and some padding */
+    footer {
+      background-color: black;
+      color: white;
+      padding: 15px;
+    }
+    
+    /* On small screens, set height to 'auto' for sidenav and grid */
+    @media screen and (max-width: 200px) {
+      .sidenav {
+        height: auto;
+        padding: 15px;
+      }
+      .row.content {height: auto;} 
+    }
+  </style>
+</head>
+<body>
+<div class="container">
+  <div class="page-header">
+    <img src="banner.jpg" class="img-rounded" alt="banner" >      
+  </div>
+
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#">Employee Attendance Management System</a>
+    </div>
+    
+    <ul class="nav navbar-nav navbar-right">
+      <li><a href="#"><span class="glyphicon glyphicon-user" data-toggle="modal" data-target="#myModal">Sign Up</span> </a></li>
+      <li><a href="#"><span class="glyphicon glyphicon-log-in" data-toggle="modal" data-target="#mymodl"> Login</span></a></li>
+    </ul>
+  </div>
+</nav>
+
+  
+ <div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog">
+          <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Sign Up</h4>
+        </div>
+        <div class="modal-body">
+               <form>
+	 <div class="input-group">
+      <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+      <input id="firstname" type="text" class="form-control" name="firstname" placeholder="Firstname">
+    </div><br>
+
+       <div class="input-group">
+      <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+      <input id="lastname" type="text" class="form-control" name="lastname" placeholder="Lastname">
+    </div><br>
+
+	<div class="input-group">
+      <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+      <input id="userid" type="text" class="form-control" name="userid" placeholder="User Id">
+    </div><br> 
+ 
+	 <div class="input-group">
+      <span class="input-group-addon"><i class="glyphicon glyphicon-circle-arrow-right"></i></span>
+      <input id="specialization" type="text" class="form-control" name="specialization" placeholder="Specialization">
+    </div><br>
+
+    <div class="input-group">
+      <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+      <input id="email" type="text" class="form-control" name="email" placeholder="Email">
+    </div><br>
+    <div class="input-group">
+      <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
+      <input id="password" type="password" class="form-control" name="password" placeholder="Password">
+    </div><br>
+     <div class="input-group">
+      <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
+      <input id="password" type="password" class="form-control" name="password" placeholder="Re-enter Password">
+    </div>
+    <br>
+
+ <div class="checkbox">
+    <label><input type="checkbox"> I Agree</label>
+  </div>   
+
+  </form>
+        </div>
+        <div class="modal-footer">
+		<button type="button" class="btn btn-primary" style="color=skyblue;">Submit</button>
+          <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+   </div>
+ </div>
+
+
+<div class="modal fade" id="mymodl" role="dialog">
+    <div class="modal-dialog">
+          <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Login</h4>
+        </div>
+        <div class="modal-body">
+          <form>
+    <div class="input-group">
+      <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+      <input id="email1" type="text" class="form-control" name="email" placeholder="Email">
+    </div><br>
+    <div class="input-group">
+      <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
+      <input id="password1" type="password" class="form-control" name="password" placeholder="Password">
+    </div><br>
+     
+ <div class="checkbox">
+    <label><input type="checkbox"> Remember me</label>
+  </div>
+   
+  </form>
+  <br>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-primary" style="color=skyblue;">Submit</button>
+          <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+</div>
+
+
+<div class="container">
+  <div class="row content">
+    <div class="col-sm-3 sidenav">
+            <ul class="nav nav-pills nav-stacked">
+<center><br><br>
+        <li ><a href="#section1">Home</a></li><hr><br>
+        <li><a href="#section2">About US</a></li><hr><br>
+	<li><a href="#section3">Privacy Policy</a></li><hr><br>
+        <li><a href="#section3">Faculty</a></li><hr><br>
+        <li><a href="#section3">Admin</a></li><hr><br>
+	<li><a href="#section2">Contact US</a></li><hr></center><br>
+      </ul><br>
+    </div>
+
+    <div class="col-sm-9">
+      
+      <div class="container">
+  <div class="page-header">
+    <img src="image.jpg" class="img-rounded" alt="banner" >      
+  </div>
+      
+     
+        </div>
+
+
+  
+</body>
+</html>
+
+ 
+    
+
